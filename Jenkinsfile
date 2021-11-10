@@ -9,25 +9,22 @@ pipeline{
     
 
     stages{
-        stage('build'{
+        stage('build'){
             steps{
-                echo 'this is the first job'
+                echo 'this is the build job'
                 sh 'npm install'
-                sleep 4
             }
         }
         stage('test'){
             steps{
-                echo 'this is the second job'
+                echo 'this is the test job'
                 sh 'npm test'
-                sleep 9
             }
         }
         stage('package'){
             steps{
-                echo 'this is the third job'
+                echo 'this is the package job'
                 sh 'npm run package'
-                sleep 7
             }
         }
     }
